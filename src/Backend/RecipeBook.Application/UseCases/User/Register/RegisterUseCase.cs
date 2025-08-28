@@ -1,5 +1,6 @@
 ﻿using RecipeBook.Communication.Requests;
 using RecipeBook.Communication.Responses;
+using RecipeBook.Exceptions.ExceptionsBase;
 
 namespace RecipeBook.Application.UseCases.User.Register
 {
@@ -25,7 +26,7 @@ namespace RecipeBook.Application.UseCases.User.Register
             if(result.IsValid == false)
             {
                 var errorMessages = result.Errors.Select(x => x.ErrorMessage).ToList();
-                throw new Exception();
+                throw new MyRecipeBookException();
             }
         }
     }
