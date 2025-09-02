@@ -129,4 +129,7 @@
   <data name="PASSWORD_EMPTY" xml:space="preserve">
     <value>A senha está incorreta.</value>
   </data>
+  <data name="UNKNOW_ERROR" xml:space="preserve">
+    <value>Error desconhecido</value>
+  </data>
 </root>

@@ -21,12 +21,12 @@ namespace RecipeBook.Application.UseCases.User.Register
         private void Validate(RequestRegisterUserJson request)
         {
             var validator = new RegisterUserValidator();
-           var result = validator.Validate(request);
+            var result = validator.Validate(request);
 
             if(result.IsValid == false)
             {
                 var errorMessages = result.Errors.Select(x => x.ErrorMessage).ToList();
-                throw new MyRecipeBookException();
+                throw new ErrorOnValidationException(errorMessages);
             }
         }
     }
